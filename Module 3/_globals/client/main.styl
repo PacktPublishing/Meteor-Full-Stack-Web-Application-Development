@@ -1,0 +1,17 @@
+// _globals/client/main.styl
+
+html, body, body > .template
+	height:100%
+
+.vertical-align
+	position:relative
+	transform:translateY(-50%)
+	top:50%
+
+.animate
+	&.opacity
+		transition: opacity 500ms
+		opacity:1
+
+		&.invisible
+			opacity:0

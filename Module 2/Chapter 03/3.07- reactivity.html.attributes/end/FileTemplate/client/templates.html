@@ -1,0 +1,17 @@
+<template name="firstTemplate">
+  {{#navbar}}
+  {{>navbutton}}
+  {{>navcolor}}
+  {{/navbar}}
+  <svg height="800" width="100%" id="shapes" style="background-color:{{bgColor}}">
+    {{> one}}
+  </svg>
+</template>
+
+
+<template name="one">
+  {{#each svgShapes}}
+  <circle cx="{{x}}" cy="{{y}}" r="40" stroke="{{border}}" stroke-width="3" fill="{{color}}" />
+  {{/each}}
+</template>
+

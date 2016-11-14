@@ -1,0 +1,74 @@
+//- /products/client/products.jade
+
+template(name="products")
+	div#products.template
+		header#promoter
+			div.container
+				div.row
+					div.col-xs-12
+						h3 Your Brand
+
+		div#content
+			section#features
+				div.container
+					div.row
+						div.col-xs-4
+							h3.text-center
+								span.fa-stack.fa-lg
+									i.fa.fa-square.fa-stack-2x.text-primary
+									i.fa.fa-users.fa-inverse.fa-stack-1x
+							h5.text-center 24 Hour Support
+
+						div.col-xs-4
+							h3.text-center
+								span.fa-stack.fa-lg
+									i.fa.fa-square.fa-stack-2x.text-primary
+									i.fa.fa-truck.fa-inverse.fa-stack-1x
+							h5.text-center Next Day Delivery
+
+						div.col-xs-4
+							h3.text-center
+								span.fa-stack.fa-lg
+									i.fa.fa-square.fa-stack-2x.text-primary
+									i.fa.fa-bomb.fa-inverse.fa-stack-1x
+							h5.text-center Mind Blown Guarantee
+
+			br.hidden-landscape-xs
+			section#featured_products
+				div.container
+					div.row
+						//- SEARCH
+						div.col-xs-12
+							div.form-group.has-feedback
+								input.input-lg.search.form-control(type="text" placeholder="Search products" autocapitalize="off" autocorrect="off" autocomplete="off" value="{{pages.search}}")
+								span(style="pointer-events:auto; cursor:pointer;").clear_search.form-control-feedback.fa.fa-search.fa-2x
+
+
+						br.visible-xs
+						//- PAGINATION
+						div.col-xs-4
+							button.btn.btn-block.btn-primary.previous-page
+								i.fa.fa-chevron-left
+
+						div.col-xs-4
+							button.btn.btn-block.btn-info {{pages.current}}
+
+						div.col-xs-4
+							unless pages.is_last_page
+								button.btn.btn-block.btn-primary.next-page
+									i.fa.fa-chevron-right
+
+						div.clearfix
+						br
+
+						//- PRODUCTS
+						+momentum(plugin="fade-fast")
+							if Template.subscriptionsReady
+								each products
+									div.col-xs-4.col-md-3
+										+product
+							else
+								div(style="height:160px;")
+									+loader color_class="text-primary"
+
+				br

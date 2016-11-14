@@ -1,0 +1,13 @@
+<body>
+  <div class="container">
+    <div id="newColor" class="btn btn-info btn-lg">
+      <span class="glyphicon glyphicon-plus"></span>
+    </div>
+    {{> colors}}
+  </div>
+</body>
+<template name="colors">
+  {{#each swatches}}
+  <div class="swatch" style="background-color:{{color}}"></div>
+  {{/each}}
+</template>

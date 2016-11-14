@@ -1,0 +1,50 @@
+<head>
+  <title>Chapter 05</title>
+</head>
+<body>
+  {{> urls}}
+  {{> linkcount}}
+</body>
+<template name="linkcount">
+  {{#with BMCount}}
+  <div id="counts">
+    <button class="btn btn-lg btn-info">
+      <span class="glyphicon glyphicon-link"></span>
+      {{unsecureCount}} /
+      <span class="glyphicon glyphicon-lock"></span>
+      {{secureCount}}
+    </button>
+  </div>
+  {{/with}}
+</template>
+<template name="urls">
+  <div class="url-container">
+    {{#each bookmarks}}
+    <div class="bookmark panel {{selected}}">
+      <div class="panel-heading">
+        <button type="button" class="close"><span
+                                                  class="glyphicon glyphicon-remove"></span>
+        </button>
+        {{#if editing}}
+        <h3 class="panel-title"><input type="text"
+                                       value="{{title}}"></h3>
+        {{else}}
+        <h3 class="panel-title"> {{title}}</h3>
+        {{/if}}
+      </div>
+      <div class="panel-body">
+        {{#if src}}
+        <a href="{{src}}">{{src}}</a>
+        {{else}}
+        <div class="input-group">
+          <input type="text" class="form-control"
+                 placeholder="enter URL here" />
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+    <input type="button" class="btn btn-primary" id="btnNewBM"
+           value="add" />
+  </div>
+</template>

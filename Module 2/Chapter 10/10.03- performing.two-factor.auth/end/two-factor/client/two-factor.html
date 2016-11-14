@@ -1,0 +1,61 @@
+<head>
+  <title>twitter-custom</title>
+</head>
+
+<body>
+  <div class="container">
+    {{>customLogin}}
+    <h1>Welcome to Meteor!</h1>
+    {{> hello}}
+  </div>
+</body>
+
+<template name="hello">
+  <button class="btn {{btnState}}">Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="customLogin">
+  <div class="btn-toolbar">
+    <div class="btn-group" role="group">
+      {{#if currentUser}}
+      <div type="button" id="logout"
+           class="btn btn-info btn-lg">Log out</div>
+      <div id="profile" class="btn btn-default btn-lg">
+        <img src="{{profPic}}" alt="">
+      </div>
+      {{else}}
+      <div type="button" id="login"
+           class="btn btn-default btn-lg">Log in</div>
+      {{/if}}
+    </div>
+    {{#if currentUser}}
+    {{>secondLogin}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="secondLogin">
+  {{#if verified}}
+  <div class="btn btn-success btn-lg">
+    <span class="glyphicon glyphicon-ok"></span>
+  </div>
+  {{else}}
+  <div class="btn-group" role="group">
+    <div class="btn btn-primary btn-lg" id="btnChallenge">
+      <span class="glyphicon glyphicon-phone"></span>
+    </div>
+    <input type="text" id="phoneNum"
+           class="btn btn-default btn-lg"
+           placeholder="{{defaultPhone}}">
+  </div>
+  <div class="btn-group" role="group">
+    <input type="text" id="verCode"
+           class="btn btn-default btn-lg"
+           placeholder="code...">
+    <div class="btn btn-primary btn-lg" id="btnVerify">
+      <span class="glyphicon glyphicon-check"></span>
+    </div>
+  </div>
+  {{/if}}
+</template>

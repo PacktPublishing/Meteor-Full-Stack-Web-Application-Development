@@ -1,0 +1,30 @@
+body {
+  font-family: 'helvetica neue';
+}
+.card {
+  display: inline-block;
+  min-width:10rem;
+  height: 10rem;
+  border: 2px dashed #ccc;
+  border-radius: 0.21rem;
+  margin: 0.25rem 0.25rem;
+  padding: 0.5rem;
+  vertical-align: top;
+}
+.container {
+  width:90%;
+  margin: auto;
+}
+.shared {
+  background-color: rgba(25, 121, 36, 0.36);
+}
+.label {
+  font-weight: bold;
+  margin: 0.2rem 0;
+  padding: 0.1rem;
+  padding-left: 0.3rem;
+}
+.label:hover {
+  background-color: rgba(7, 180, 21, 0.76);
+  border-radius: 0.2rem;
+}

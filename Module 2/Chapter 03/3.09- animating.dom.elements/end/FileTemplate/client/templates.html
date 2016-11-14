@@ -1,0 +1,27 @@
+<template name="firstTemplate">
+  {{#navbar}}
+  {{>navbutton}}
+  {{>navoffset}}
+  {{>navshapes}}
+  {{/navbar}}
+  <svg height="800" width="100%" id="shapes">
+    {{> Template.dynamic template = curTemplate}}
+  </svg>
+</template>
+
+
+<template name="one">
+  {{#each svgShapes}}
+  {{#Animate}}
+  <circle class="shape animate" cx="{{x}}" cy="{{y}}" r="40" stroke="{{border}}" stroke-width="3" fill="{{color}}" />
+  {{/Animate}}
+  {{/each}}
+</template>
+
+<template name="two">
+  {{#each svgShapes}}
+  {{#Animate}}
+  <rect class="shape animate" x="{{x}}" y="{{y}}" width="80" height="80" stroke="{{border}}" stroke-width="3" fill="{{color}}" />
+  {{/Animate}}
+  {{/each}}
+</template>

@@ -1,0 +1,32 @@
+//- /login/client/login.jade
+
+template(name="login")
+	div#login.template
+		div.vertical-align.container
+			div.row
+				div.col-xs-12.col-sm-6.col-sm-offset-3
+					form.login
+						div.form-group
+							label Email
+							input.email.input-lg.form-control.text-center(type="text" placeholder="email" value="{{email}}" autocapitalize="off" autocorrect="off" autocomplete="off")
+
+						div.form-group
+							label Password
+							input.password.input-lg.form-control.text-center(type="password" placeholder="password")
+
+						if error
+							div.row
+								div.col-xs-12
+									div.alert.alert-warning {{error}}
+
+						button.login.btn.btn-block.btn-primary.btn-lg Log In
+
+
+
+
+
+
+
+
+
+

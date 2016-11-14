@@ -1,0 +1,19 @@
+<body>
+  {{> cPic}}
+</body>
+<template name="cPic">
+  <svg id="stateBars" width="800" height="600">
+    {{#each stateStats}}
+    {{> stateStat}}
+    {{/each}}
+  </svg>
+  <div id="cComment">{{curComment}}</div>
+  <img id="cPic" src="{{curPic}}"/>
+</template>
+<template name="stateStat">
+  <rect width="{{width}}" height="{{stackHeight}}"
+        y="{{stackPosition}}"
+        style="fill:{{color}};fill-opacity:0.8;" />
+  <text x="5" y="{{textYPos}}" fill="black">{{state}}: {{total}}
+  </text>
+</template>

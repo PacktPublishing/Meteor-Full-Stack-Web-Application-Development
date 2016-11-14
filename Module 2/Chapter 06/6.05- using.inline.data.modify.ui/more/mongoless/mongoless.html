@@ -1,0 +1,23 @@
+<head>
+  <title>mongoless</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button id="addBtn">Click Me</button>
+  <button id="chgColor">Or Me!</button>
+  <p>You've pressed the button {{counter}} times.</p>
+  {{#each buttonPresses}}
+  {{> helloBtn}}
+  {{/each}}
+</template>
+<template name="helloBtn">
+  <div class="btn btn-info pressed"
+       style="background-color:{{btnColor}}">
+    #{{btnRank}}</div>
+</template>

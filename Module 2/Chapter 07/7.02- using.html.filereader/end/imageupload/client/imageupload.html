@@ -1,0 +1,27 @@
+<body>
+  <h1>Images!</h1>
+  {{> display}}
+  {{> dropzone}}
+</body>
+<template name="display">
+  {{#masonryContainer
+  columnWidth=50
+  transitionDuration="0.2s"
+  id="MasonryContainer"
+  }}
+  {{#each imgs}}
+  {{> img}}
+  {{/each}}
+  {{/masonryContainer}}
+</template>
+<template name="dropzone">
+  <div id="dropzone" class="{{dropcloth}}">Drag images here...
+  </div>
+</template>
+<template name="img">
+  {{#masonryElement "MasonryContainer"}}
+  <img src="{{src}}"
+       class="display-image"
+       style="width:{{calcWidth}}"/>
+  {{/masonryElement}}
+</template>

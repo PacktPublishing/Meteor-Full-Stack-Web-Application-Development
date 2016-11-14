@@ -1,0 +1,25 @@
+body {
+  background-color: #f5f0e5;
+  font-size: 2rem;
+}
+div#dropzone {
+  position: fixed;
+  bottom:5px;
+  left:2%;
+  width:96%;
+  height:100px;
+  margin: auto auto;
+  line-height: 100px;
+  text-align: center;
+  border: 3px dashed #7f898d;
+  color: #7f8c8d;
+  background-color: rgba(210,200,200,0.5);
+}
+div#dropzone.active {
+  border-color: #27ae60;
+  color: #27ae60;
+  background-color: rgba(39, 174, 96,0.3);
+}
+img.display-image {
+  max-width: 400px;
+}

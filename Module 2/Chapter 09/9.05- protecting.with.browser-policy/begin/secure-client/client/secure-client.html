@@ -1,0 +1,28 @@
+<head>
+  <title>secure-client</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button
+  <div class="badge">{{counter}}</div>
+  times.</p>
+<p>Which is 1/2 of our eval value: {{dblCounter}}</p>
+<a href="javascript:alert('hax0rz!'); Meteor.call('dropTable');">
+  <div class="btn btn-info">Bootstrap!</div>
+</a>
+</template>

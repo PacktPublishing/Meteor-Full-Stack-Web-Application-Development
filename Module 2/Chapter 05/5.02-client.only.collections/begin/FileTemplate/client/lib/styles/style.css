@@ -1,0 +1,22 @@
+/* CSS declarations go here */
+body {
+  font-size:1.5rem;
+}
+.url-container{
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(221, 221, 221);
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 20px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 90%;
+  border-style:solid;
+}
+.input-group {
+  width:90%;
+}

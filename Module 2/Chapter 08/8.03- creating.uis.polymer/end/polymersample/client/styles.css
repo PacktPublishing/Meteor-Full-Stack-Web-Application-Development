@@ -1,0 +1,25 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  font-family: 'RobotoDraft', sans-serif;
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+div.sText {
+  display:inline-block;
+  width: 20rem;
+}
+div.sBtn {
+  display: inline-block;
+  width: 5rem;
+  vertical-align: text-top;
+}
+paper-button.colored {
+  color: white);
+}
+paper-button[raised].colored {
+  background: rgb(66, 133, 244);
+  color: white;
+}

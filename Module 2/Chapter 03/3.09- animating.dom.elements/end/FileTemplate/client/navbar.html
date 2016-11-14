@@ -1,0 +1,30 @@
+<template name="navbutton">
+  <div class="nav navbar-left">
+    <div id="resetShapes" class="btn btn-warning navbar-btn">
+      {{shapeCount}}
+    </div>
+  </div>
+</template>
+
+<template name="navbar">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div id="title" class="navbar-brand">Shapes Collection Count</div>
+      </div>
+      {{> Template.contentBlock}}    
+    </div>
+  </nav>
+</template>
+<template name="navshapes">
+  <div class="nav navbar-right">
+    <button id="btnCircles" class="btn btn-success navbar-btn">one</button>
+    <button id="btnSquares" class="btn btn-danger navbar-btn">two</button>
+  </div>
+</template>
+<template name="navoffset">
+  <div class="nav navbar-right">
+    <button id="btnNegative" class="btn btn-danger navbar-btn" data-offset="-">red</button>
+    <button id="btnPositive" class="btn btn-info navbar-btn" data-offset="">blue</button>
+  </div>
+</template>

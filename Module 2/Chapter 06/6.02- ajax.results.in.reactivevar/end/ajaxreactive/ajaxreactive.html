@@ -1,0 +1,38 @@
+<head>
+  <title>ajaxreactive</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+  {{> weather}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You are starting at {{counter}} longitude.</p>
+</template>
+
+<template name="weather">
+  {{#if reports}}
+  <table class="table">
+    <thead>
+      <th>name</th>
+      <th>weather</th>
+      <th>temp</th>
+      <th>humidity</th>
+    </thead>
+    <tbody>
+      {{#each reports}}
+      <tr class={{severity}}>
+        <td>{{name}}</td>
+        <td>{{description}}</td>
+        <td>{{temp}}</td>
+        <td>{{humidity}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{/if}}
+</template>

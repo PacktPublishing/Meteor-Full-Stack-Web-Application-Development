@@ -1,0 +1,18 @@
+<body>
+  <div class="container">
+    {{> open}}
+  </div>
+</body>
+<template name="open">
+  <h3 id="new-open">open:</h3>
+  {{#each opens}}
+  <div class="card {{shared}}">
+    <div class="label id">id</div>
+    <div class="id">{{_id}}</div>
+    <div class="label text">text</div>
+    <div class="text">{{text}}</div>
+    <div class="label owner">owner</div>
+    <div class="owner">{{owner}}</div>
+  </div>
+  {{/each}}
+</template>

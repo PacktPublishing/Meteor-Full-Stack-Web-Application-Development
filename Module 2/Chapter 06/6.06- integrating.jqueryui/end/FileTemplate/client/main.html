@@ -1,0 +1,16 @@
+<head>
+  <title>Swatches</title>
+</head>
+<body>
+  {{> colors}}
+</body>
+<template name="colors">
+  <h1>Yay Colors!</h1>
+  <div id="cList">
+    {{#each swatches}}
+    <div class="swatch" style="background-color:{{color}}">{{color}}</div>
+    {{/each}}
+  </div>
+  <input id="btnNew" type="button" class="btn btn-primary"
+         value="New Color" />
+</template>

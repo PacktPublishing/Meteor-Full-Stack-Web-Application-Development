@@ -1,0 +1,27 @@
+<head>
+  <title>FileTemplate</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+<template name="routeexample">
+  {{yield}}
+</template>
+
+<template name="thing1">
+  <div> I am the FIRST page</div>
+</template>
+
+<template name="thing2">
+  <div> I am the SECOND page</div>
+</template>

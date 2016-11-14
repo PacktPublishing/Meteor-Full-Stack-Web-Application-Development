@@ -1,0 +1,17 @@
+circle,rect {
+  opacity:1;
+  transition:all 500ms 0ms ease-in;
+}
+
+circle:hover, rect:hover{
+  opacity:0;
+}
+
+div.nav {
+  margin-left: 20px;
+}
+
+rect.animate, circle.animate {
+  transform: translate(-300px,-100px);
+  opacity:0;
+}

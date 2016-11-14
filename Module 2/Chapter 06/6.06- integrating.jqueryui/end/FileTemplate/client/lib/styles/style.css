@@ -1,0 +1,10 @@
+.swatch {
+  min-height: 100px;
+  min-width: 100px;
+  display:inline-block;
+  color:white;
+  text-align: center;
+}
+#cList {
+  width: 520px;
+}

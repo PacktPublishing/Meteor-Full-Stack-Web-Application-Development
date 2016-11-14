@@ -1,0 +1,25 @@
+<template name="firstTemplate">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div id="title" class="navbar-brand" style="color:{{randColor}}">Shapes Collection Count</div>
+      </div>
+      <div class="nav navbar-left">
+        <div id="resetShapes" class="btn btn-warning navbar-btn">
+          {{shapeCount}}
+        </div>
+      </div>
+    </div>
+  </nav>
+  <svg height="800" width="100%" id="shapes">
+    {{> one}}
+  </svg>
+</template>
+
+
+<template name="one">
+  {{#each svgShapes}}
+  <circle cx="{{x}}" cy="{{y}}" r="40" stroke="{{randColor}}" stroke-width="3" fill="{{randColor}}" />
+  {{/each}}
+</template>
+

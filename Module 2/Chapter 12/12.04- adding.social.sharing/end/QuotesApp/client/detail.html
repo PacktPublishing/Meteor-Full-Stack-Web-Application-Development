@@ -1,0 +1,60 @@
+<template name="detail">
+  <div class="page page-detail">
+    <div class="container">
+      {{#if editing}}
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon"
+              id="addon-title">Title</span>
+        <input type="text"
+               id="input-title"
+               class="form-control"
+               placeholder="title..."
+               value="{{title}}">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"
+              id="addon-quote">Quote</span>
+        <textarea name="input-quote"
+                  id="input-quote" rows="4"
+                  class="form-control">{{quote}}
+        </textarea>
+      </div>
+      <div class="input-group">
+        <input type="text"
+               id="input-author"
+               class="form-control"
+               placeholder="author..."
+               value="{{author}}">
+        <span class="input-group-addon"
+              id="addon-author">Author</span>
+      </div>
+      <div class="form tags">
+        <textarea name="input-tags"
+                  id="input-tags"
+                  class="form-control"
+                  rows="5">{{tags}}</textarea>
+      </div>
+      {{else}}
+      <h3 class="title">{{title}}</h3>
+      <div class="container quote">{{quote}}</div>
+      <div class="row container author">
+        <div class="pull-right">-{{author}}</div>
+      </div>
+      <div class="row container tags">
+        {{#each tagsFormatted}}
+        <div class="btn btn-xs btn-primary
+                    tag">{{tag}}</div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+    <div class="container">
+      <div class="btn btn-danger toggle-edit pull-right">
+        <span class="glyphicon {{editbuttonstate}}"></span>
+      </div>
+      <div class="btn pull-left {{tweetColor}}"
+           id="btn-tweet">{{tweetText}}
+      </div>
+    </div>
+  </div>
+</template>

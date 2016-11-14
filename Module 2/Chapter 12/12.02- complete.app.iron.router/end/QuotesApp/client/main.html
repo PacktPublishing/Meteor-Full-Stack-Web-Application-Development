@@ -1,0 +1,21 @@
+<template name="main">
+  <div class="page">
+    <div class="list-group">
+      {{#each quotes}}
+      <a class="list-group-item quote-title">
+        <span class="glyphicon glyphicon-menu-right
+                     pull-right"></span>
+        <h4 class="list-group-item-heading">{{title}}</h4>
+        {{#each tagsFormatted}}
+        <div class="btn btn-xs btn-primary">{{tag}}</div>
+        {{/each}}
+      </a>
+      {{/each}}
+      <a href="#" class="list-group-item add-quote">
+        <div class="btn btn-lg center-block">
+          <span class="glyphicon glyphicon-plus"></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,19 @@
+//- /orders/cart/client/order_quantity.jade
+
+template(name="order_quantity")
+	div#order_quantity.template
+		section#number
+			h1.text-center.vertical-align {{total}}
+
+		section#number-pad
+			each numbers
+				div.number
+					h2.text-center.vertical-align {{number}}
+
+			div.delete
+				p.text-center.vertical-align
+					i.fa.fa-undo.fa-2x
+
+			div.add-to-cart
+				p.text-center.vertical-align
+					i.fa.fa-check.fa-2x

@@ -1,0 +1,24 @@
+//- /products/client/create_product.jade
+
+template(name="create_product")
+	h3.text-center create product
+
+	div.container
+		div.row
+			div.col-xs-12
+				+autoForm collection="Products" type="insert" id="insert_product" preserveForm="true"
+					+afQuickField name="name" autocorrect="off" autocomplete="off"
+
+					div.form-group(class="{{#if afFieldIsInvalid name='price'}} has-error has-feedback {{/if}}")
+						label.control-label {{afFieldLabelText name="price"}}
+						+afFieldInput name="price" validation="submit"
+						if afFieldIsInvalid name="price"
+							span.glyphicon.glyphicon-certificate.form-control-feedback
+							span.help-block {{afFieldMessage name="price"}}
+
+
+					+afQuickField name="description"
+					+afQuickField name="sku"
+
+					button.btn.btn-block.btn-primary Add Product
+

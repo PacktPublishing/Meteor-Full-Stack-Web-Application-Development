@@ -1,0 +1,12 @@
+/* Set a basic variable */
+base-font-size = 20px
+base-color = #ccc
+/* Set a variable based on result of mixin call */
+body-background = invert(base-color)
+
+/* Set some basic rules */
+body
+  color base-color
+  background body-background
+  font-size base-font-size
+  font-family sans-serif

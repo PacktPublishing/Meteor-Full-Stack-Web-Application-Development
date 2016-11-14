@@ -1,0 +1,23 @@
+<head>
+  <title>FileTemplate</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <div class="btn-group-vertical">
+    {{#each comments}}
+    <div class="btn btn-default">{{time}}
+      <span class="label label-warning">
+        {{number}}
+      </span>
+    </div>
+    {{/each}}
+  </div>
+  <p><button>Click Me</button></p>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>

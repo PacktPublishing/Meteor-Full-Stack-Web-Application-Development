@@ -1,0 +1,21 @@
+<template name="authors">
+  {{#masonryContainer
+  columnWidth=265
+  gutter=5
+  transitionDuration="0.2s"
+  id="MasonryContainer"
+  }}
+  {{#each authors}}
+  {{> authorCard}}
+  {{/each}}
+  {{/masonryContainer}}
+</template>
+<template name="authorCard">
+  {{#masonryElement "masonryContainer"}}
+  <div>
+    <polymer-github-card
+      user="{{userid}}">
+    </polymer-github-card>
+  </div>
+  {{/masonryElement}}
+</template>

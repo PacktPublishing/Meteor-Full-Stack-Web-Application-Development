@@ -1,0 +1,17 @@
+body {font-family: 'Raleway', sans-serif;}
+.page {vertical-align: top;position: absolute;width: 100%;height:
+  100%;background-color: #eee;top: 50px;}
+.page-detail {background-color: #fff;color: #555;}
+.glyphicon-book {font-size: 3rem;line-height: 2rem;}
+.toggle-edit{margin-top: 1.4rem;font-size: 2rem;
+  background-color:#777;border-radius: 50%;border: none;padding:
+    1.5rem;width: 5rem;height: 5rem;}
+.input-group {margin-top: 1.4rem;}
+.quote {font-size:2rem;}
+.title {font-size:3rem;}
+.author {margin-bottom:2rem;margin-top:1rem;}
+.tag {margin:0.25rem;}
+.tags {margin-top:1rem;}
+.add-quote {height:9rem;}
+.add-quote .btn{color:#5bc0de;font-size:4rem;}
+#btn-tweet{margin-top: 2.4rem;}

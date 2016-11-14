@@ -1,0 +1,34 @@
+<body>
+  {{> loginButtons}}
+  {{> toolbar}}
+  <div id="bgpicture"></div>
+  {{> picture}}
+</body>
+
+
+<template name="picture">
+  <canvas id="picture" class="no-copy">Images go here...</canvas>
+</template>
+<template name="toolbar">
+  <div class="brush-size" id="brush-size">
+    <svg id="brush-preview"
+         height="70" width="70"
+         style="display:{{eraseMode}}">
+      <circle cx="35" cy="35"
+              r="{{preview.size}}"
+              fill="{{preview.color}}" />
+    </svg>
+  </div>
+  {{#masonryContainer columnWidth=50
+  transitionDuration="0.2s"
+  id="MasonryContainer" }}
+  {{#each swatches}}
+  {{> swatch}}
+  {{/each}}
+  {{/masonryContainer}}
+</template>
+<template name="swatch">
+  {{#masonryElement "MasonryContainer"}}
+  <div class="swatch" style="background-color:{{color}};">{{color}}</div>
+  {{/masonryElement}}
+</template>

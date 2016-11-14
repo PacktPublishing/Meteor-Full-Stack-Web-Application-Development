@@ -1,0 +1,14 @@
+body {
+  font-family: 'Helvetica-Neue', sans-serif;
+  font-size: 12px;
+}
+#stateBars {
+  border:dashed 3px #ccc;
+}
+#cComment {
+  margin-top: 10px;
+}
+#cPic {
+  width: 200px;
+  margin-top: 10px;
+}

@@ -1,0 +1,25 @@
+<head>
+  <title>twitter-custom</title>
+</head>
+
+<body>
+  <div class="container">
+    {{>customLogin}}
+    <h1>Welcome to Meteor!</h1>
+    {{> hello}}
+  </div>
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="customLogin">
+  {{#if currentUser}}
+  <div id="logout" class="btn btn-info">Log out</div>
+  <img src="{{profPic}}" alt="">
+  {{else}}
+  <div id="login" class="btn btn-default">Log in</div>
+  {{/if}}
+</template>

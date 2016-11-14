@@ -1,0 +1,45 @@
+// products/client/products.styl
+@import "_globals/client/bootstrap/custom.bootstrap.import.styl"
+@import "jeet" // Add jeet
+
+#products
+	#promoter
+		background: $brand-primary
+		height: 80%
+
+		+below($screen-sm-min) // If the screen width is smaller than -sm size
+			+portrait() // And the device is in portrait mode
+				height: 30%
+
+			+landscape() // And the device is in landscape mode
+				col(1/3, gutter:0)
+				height: 100%
+
+	#content
+		+below($screen-sm-min) // If the screen width is smaller than -sm size
+			+landscape() // And the device is in landscape mode
+				col(2/3, gutter:0)
+				height: 100%
+				overflow-y:hidden
+				overflow-x:scroll
+				-webkit-overflow-scrolling: touch
+				white-space:nowrap
+
+				*
+					white-space:normal
+
+				.container
+					width:100% // Override bootstrap container
+
+				section
+					display:inline-block
+					height:100%
+
+					&#featured_products
+						overflow:scroll
+						-webkit-overflow-scrolling: touch
+
+				.hidden-landscape-xs
+					display:none
+
+
